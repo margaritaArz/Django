@@ -1,0 +1,5 @@
+.test {
+    background-color: red;
+}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
