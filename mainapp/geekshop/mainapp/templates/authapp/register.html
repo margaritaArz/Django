@@ -1,0 +1,14 @@
+{% extends 'authapp/base.html' %}
+
+{%block contant%}
+
+    <form method="POST">
+        { % csrf_token % }
+        {{form, as_sp}}
+
+        <input class="form-control" type="submit" value="Зарегистрироваться">
+
+
+    </form>
+
+{% endblock %}
