@@ -1,0 +1,28 @@
+{% extends 'mainapp/base.html' %}
+{% load static  %}
+
+{% block title%}
+    <meta charset="UTF-8">
+    <title>Главная</title>
+{% endblock %}
+
+
+{% block css %}
+    <link rel="stylesheet" type='text/css' href="/static/css/index.css">
+{% endblock %}
+
+{% block content %}
+    <h1 class="test">Главная</h1>
+    {%if request.user.is_authenticated %}
+        <h2> Привет, {{request.user.username| title}}! </h2>
+        <a href="{% url 'auth:edit' request.user.pk %}"> Редактировать </a>>
+        <br>
+        <a href ="{% url 'auth:logout' %}">Выйти </a>
+    {% else %}
+    <h2> Войдите </h2>
+    <a href="{% url 'auth:login'%}"> Войти </a>
+    {% endif %}
+{% now "Y" %}
+
+
+{% endblock %}
