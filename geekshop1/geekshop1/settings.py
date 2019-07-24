@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainapp',
-    'authapp',
-    #'authapp.apps.AuthappConfig',
+    'mainapp.apps.MainappConfig',
+    'authapp.apps.AuthappConfig',
+    'basketapp.apps.BasketappConfig',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'geekshop1.mainapp.urls'
+ROOT_URLCONF = 'mainapp.urls'
 
 TEMPLATES = [
     {
@@ -104,8 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTH_USER_MODEL = 'authapp.ShopUser'
-
-#AUTH_USER_MODEL refers to model 'authapp.ShopUser' that has not been installed
 
 
 # Internationalization
