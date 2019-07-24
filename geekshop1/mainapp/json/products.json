@@ -1,0 +1,26 @@
+[
+    {
+        "category": "Книга",
+        "name": "Искусство древнего Рима",
+        "price": 1200,
+        "quantity": 10
+    },
+    {
+        "category": "Свечи",
+        "name": "Жасмин",
+        "price": 500,
+        "quantity": 1
+    },
+    {
+        "category": "Мягкие игрушки",
+        "name": "Мики Маус",
+        "price": 3000,
+        "quantity": 7
+    },
+    {
+        "category": "Книги",
+        "name": "Прокачай мозг",
+        "price": 400,
+        "quantity": 15
+    }
+]

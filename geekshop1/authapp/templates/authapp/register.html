@@ -1,0 +1,20 @@
+{% extends 'authapp/base.html' %}
+{% load staticfiles %}
+
+    <meta charset="UTF-8">
+
+{%block contant%}
+
+    <form method="POST">
+        { % csrf_token % }
+        {{ form.as_sp }}
+
+        <input class="form-control" type="submit" value="Зарегистрироваться">
+          </form>
+ <button class="btn btn-round form-control">
+        <a href="{% url 'auth:register' %}" class="">
+            зарегистрироваться
+        </a>
+    </button>
+
+{% endblock %}
