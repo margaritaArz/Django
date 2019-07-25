@@ -1,10 +1,12 @@
 {% extends 'mainapp/base.html' %}
+{% load custom_tags %}
 {% load static  %}
 <meta charset="UTF-8">
 
 {% block title%}
 
     <title>Продукты</title>
+
 {% endblock %}
 
 
@@ -13,6 +15,12 @@
 {% endblock %}
 
 {% block content %}
-<h1>Продукты</h1>
+    <h1>Продукты</h1>
+    <div>Количество продуктов в корзине: {{ basket.0.total_cost|floatformat:0 }} руб </div>
+    <div>Общая стоимость корзины: ({{ basket.0.total_quantity }} шт)</div>
+    <h3>Категории</h3>
+    {% include 'mainapp/includes/inc_category_menu.html' %}
+
 
 {% endblock %}
+
