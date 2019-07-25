@@ -11,16 +11,16 @@
             </a>
         </div>
         <div class="menu-item">
-            <a href="{% url 'products:index' %}"
-               class="{% if request.resolver_match.namespace == 'products' %}
+            <a href="{% url 'products' %}"
+               class="{% if request.resolver_match.url.namespace == 'products' %}
                         active
                       {% endif %}">
                 Продукты
             </a>
         </div>
         <div class="menu-item">
-            <a href="{% url 'contacts' %}"
-               class="{% if request.resolver_match.url_name == 'contacts' %}
+            <a href="{% url 'contact' %}"
+               class="{% if request.resolver_match.url_name == 'contact' %}
                         active
                       {% endif %}">
                 Контакты
@@ -38,4 +38,8 @@
                 Корзина
             </a>
         </div>
+    <a href="{% url 'basket:view' %}" class="basket">
+
+</a>
 </ul>
+
